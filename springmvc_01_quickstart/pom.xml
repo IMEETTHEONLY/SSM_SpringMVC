@@ -15,6 +15,7 @@
     </properties>
 
 
+
 <!--    导入servlet和springmvc的坐标-->
 
 <!--    mvc是servlet的框架所以说我肯定要导入servlet-->
@@ -36,6 +37,8 @@
     </dependencies>
 
 <!--    tamcat的插件-->
+
+
     <build>
         <plugins>
             <plugin>
