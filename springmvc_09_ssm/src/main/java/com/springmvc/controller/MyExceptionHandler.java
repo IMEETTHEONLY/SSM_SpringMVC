@@ -12,14 +12,14 @@ public class MyExceptionHandler {
     @ExceptionHandler(BussinessException.class)
     public Result<String> BussinessException(BussinessException ex){
         System.out.println(ex.getMessage());
-        return new Result<>(Code.Business_ERR,ex.getMessage());
+        return new Result<>(Code.Business_ERR,ex.getMessage(),null);
     }
 
     //捕捉系统异常
     @ExceptionHandler(SystemException.class)
     public Result<String> SystemException(SystemException ex){
         System.out.println(ex.getMessage());
-        return new Result<>(Code.SYSTEM_UNKNOWN_ERR,ex.getMessage());
+        return new Result<>(Code.SYSTEM_UNKNOWN_ERR,ex.getMessage(),null);
     }
 
     //步骤其他异常

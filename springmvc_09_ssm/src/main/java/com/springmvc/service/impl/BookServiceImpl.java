@@ -17,18 +17,19 @@ public class BookServiceImpl implements BookService {
     private BookDao bookDao;  //这里是mybatis的自动代理 没有交给sprint管理 所以说报错
 
     public boolean save(Book book) {
-        bookDao.save(book);
-        return true;
+        //判断影响行数是否大于0
+       return bookDao.save(book)>0;
+
     }
 
     public boolean update(Book book) {
-        bookDao.update(book);
-        return true;
+        return bookDao.update(book)>0;
+
     }
 
     public boolean delete(Integer id) {
-        bookDao.delete(id);
-        return true;
+       return bookDao.delete(id)>0;
+
     }
 
     public Book getById(Integer id) {

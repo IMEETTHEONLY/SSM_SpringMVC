@@ -21,6 +21,11 @@ public class Result<E> {
         this.data = data;
     }
 
+    public Result(Integer code, String msg) {
+        this.code = code;
+        this.msg = msg;
+    }
+
     /**
      * 获取
      * @return code
